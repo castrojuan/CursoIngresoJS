@@ -31,17 +31,17 @@ var vCirculo;
 function Materiales () 
 {
 	
-	var vLargo
-	var vAncho
-	var vPerimetro
+	var vBase
+	var vAltura
+	var vArea
 	var vCemento
     var vCal
 
-	vLargo = parseInt(document.getElementById("txtIdLargo").value);
-    vAncho = parseInt(document.getElementById("txtIdAncho").value);
-    vPerimetro = (vLargo + vAncho) * 2;
-    vCemento = vPerimetro * 2;
-    vCal = vPerimetro * 3;
+	vBase = parseInt(document.getElementById("txtIdLargo").value);
+    vAltura = parseInt(document.getElementById("txtIdAncho").value);
+    vArea = (vBase * vAltura) * (vBase * vAltura)
+    vCemento = vArea * 2;
+    vCal = vArea * 3;
     alert("se requieren " + vCemento + " bolsas de cemento y " + vCal " bolsas de cal"); 
 
 }
