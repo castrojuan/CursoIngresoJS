@@ -4,7 +4,7 @@ function mostrar()
 
 vEdad = parseInt(document.getElementById("txtIdEdad").value);
 
-if (vEdad == 15);
+if (vEdad == 15)
 
 	{  
 	alert("niña bonita");

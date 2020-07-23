@@ -2,11 +2,12 @@ function mostrar()
 {
 	let vEdad;
 
-vEdad = parseInt(document.getElementById("txtEdad").value);
+vEdad = parseInt(document.getElementById("txtIdEdad").value);
 
 if (vEdad >= 18)
+
 {
-	alert("mayor de vEdad");
+	alert("mayor de Edad");
 }
 	
 

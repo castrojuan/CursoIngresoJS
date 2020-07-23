@@ -26,22 +26,20 @@ var vCirculo;
     vCirculo = parseFloat(document.getElementById("txtIdRadio").value);
     vRadio = ((vCirculo * vCirculo ) * vPi) * 3;
 
-    alert("la cantidad de alambre requerida es de " + vRadio );	
+    alert("la cantidad de alambre requerida es de " + vRadio + "metros");	
 }
 function Materiales () 
 {
-	
-	var vBase
-	var vAltura
-	var vArea
-	var vCemento
-    var vCal
+	var vBase;
+	var vAltura;
+	var vSuperficie;
+	var vCemento;
+    var vCal;
 
-	vBase = parseInt(document.getElementById("txtIdLargo").value);
-    vAltura = parseInt(document.getElementById("txtIdAncho").value);
-    vArea = (vBase * vAltura) * (vBase * vAltura)
-    vCemento = vArea * 2;
-    vCal = vArea * 3;
-    alert("se requieren " + vCemento + " bolsas de cemento y " + vCal " bolsas de cal"); 
-
+	vBase = parseInt(document.getElementById("txtIdAncho").value);
+    vAltura = parseInt(document.getElementById("txtIdLargo").value);
+    vSuperficie = vBase * vAltura;
+    vCemento = vSuperficie * 2;
+    vCal = vSuperficie * 3;
+    alert("se requieren " + vCemento + " bolsas de cemento y " + vCal + " bolsas de cal"); 
 }
