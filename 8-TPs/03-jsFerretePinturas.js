@@ -9,7 +9,7 @@ function FahrenheitCentigrados ()
 
 	vTemperatura = parseFloat(document.getElementById("txtIdTemperatura").value);
 	vResult = (vTemperatura - 32) * 5 / 9; 
-	alert (vResult);
+	alert (vTemperatura + " grados farenheit son " + vResult.toFixed(2) + " grados centigrados");
 }
 
 function CentigradosFahrenheit () 
@@ -19,5 +19,5 @@ function CentigradosFahrenheit ()
 
 	vTemperatura = parseFloat(document.getElementById("txtIdTemperatura").value);
 	vResult = (vTemperatura * 9 / 5 + 32); 
-	alert ((vResult).toFixed(2));
+	alert(vTemperatura + " grados centigrados son " + vResult.toFixed(2) + " grados farenheit");
 }
