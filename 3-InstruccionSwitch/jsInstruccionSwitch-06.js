@@ -15,7 +15,7 @@ function mostrar()
 	alert ("es de mañana");
 	break;
 
-	//case (>=12 && <=19):
+	//case git(>=12 && <=19):
 	case (12):
 	case (13):
 	case (14):
