@@ -10,16 +10,16 @@ switch (vMes)
 	case ("Junio"):
     case ("Septiembre"):
     case ("Noviembre"):
-    alert ("este mes tiene 30 dias");
+alert ("este mes tiene 30 dias");
     break;
 
     case ("Febrero"):
-    alert ("este mes tiene 28 dias");
+alert ("este mes tiene 28 dias");
     break;
 
-default:
+    default:
 alert ("Este mes tiene 31 dias");
-break;
+    break;
 }
 
 	
