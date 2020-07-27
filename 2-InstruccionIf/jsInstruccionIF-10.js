@@ -14,7 +14,7 @@ else if ( vNum >= 4)
 	alert(aprobo);	//Genero el número RANDOM entre 1 y 10 
 }
 	
-else (vNum < 4)
+else if (vNum < 4)
 	{alert("vamos, la proxima se puede")}
 }
 
