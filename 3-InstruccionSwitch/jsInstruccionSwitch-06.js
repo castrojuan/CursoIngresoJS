@@ -4,7 +4,18 @@ function mostrar()
 
 	vHora = parseInt(document.getElementById("txtIdHora").value);
 
-	switch (vHora)
+
+if(vHora >=7 && vHora <=11)
+	{alert("es de mañana");
+}
+else if(vHora >=12 && vHora <=19)
+	{alert("es de tarde");
+}
+else if((vHora >=0 && vHora <=6) || (vHora >=19 && vHora <=24))
+	{
+		alert("es de noche");
+}
+/*	switch (vHora)
 {
 	//case (>=7 && <=11):
 	case (7):
@@ -16,7 +27,7 @@ function mostrar()
 	break;
 
 	//case git(>=12 && <=19):
-	case (12):
+	case 12:
 	case (13):
 	case (14):
 	case (15):
@@ -46,5 +57,5 @@ function mostrar()
 	break;
 }
 
-
+*/
 }//FIN DE LA FUNCIÓN

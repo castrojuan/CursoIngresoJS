@@ -17,7 +17,7 @@ switch (vHora)
 	break;
 
 	default:
-alert();
+
 break;
 	}
 }

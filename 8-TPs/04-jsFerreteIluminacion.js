@@ -9,8 +9,9 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 
  */
 function CalcularPrecio () 
-{
- 	const Precio = 35;
+
+
+{   let Precio = 35;
  	let Cantidad;
  	let Marca;
  	let Descuento;
@@ -22,14 +23,86 @@ function CalcularPrecio ()
 Cantidad = parseInt(document.getElementById("txtIdCantidad").value);
 Marca = document.getElementById("Marca").value;
 
-switch (Cantidad)      
+
+
+    
+	if (Marca == "ArgentinaLuz" && Cantidad == 3)
+		{
+			Descuento = 15;
+		}
+	else if ( Marca == "FelipeLamparas" && Cantidad == 3)
+		{ 
+			Descuento = 10;
+		}
+		else 
+			{
+				Descuento = 5;
+			}
+			
+
+
+	if (Marca == "ArgentinaLuz" || Marca == "FelipeLamparas" && Cantidad == 4)
+		{
+			Descuento = 25;
+		}
+
+	else 
+		{
+			Descuento = 20;
+		}
+
+	
+
+	
+	if (Marca == "ArgentinaLuz" && Cantidad == 5)
+		{
+			Descuento = 40;
+		}
+	else
+		{
+			Descuento = 30;
+		}
+
+
+if ( Cantidad >= 6)
 {
-	case (1):
-	case (2):
+Descuento = 50;
+}
+
+if ( Cantidad <= 2)
+{
+Descuento = 0;
+}
+
+
+PrecioDescuento = parseFloat(Precio - Precio * Descuento /100);
+
+document.getElementById("txtIdprecioDescuento").value = PrecioDescuento;
+
+ImporteFinal = PrecioDescuento * Cantidad;
+
+if (ImporteFinal > 120)
+{
+	IiBb = ImporteFinal * 0.1;
+	ImporteFinal = parseFloat(ImporteFinal + IiBb);
+
+alert ("Usted pago " + (ImporteFinal.toFixed(2) + " siendo " + (IiBb.toFixed(2)) + " el impuesto que se pago"));
+
+}
+else
+	{
+		alert ("Precio final " + ImporteFinal);
+	}	
+
+
+/*switch (Cantidad)      
+{
+	case 1:
+	case 2:
 	Descuento = 0;
 	break;
 
-	case (3):     
+	case 3:     
 	if (Marca == "ArgentinaLuz")
 		{
 			Descuento = 15;
@@ -43,7 +116,7 @@ switch (Cantidad)
 			}
 			break;
 
-	case (4):
+	case 4:
 	if (Marca == "ArgentinaLuz" || Marca == "FelipeLamparas")
 		{
 			Descuento = 25;
@@ -56,7 +129,7 @@ switch (Cantidad)
 
 	break;
 
-	case (5):
+	case 5:
 	if (Marca == "ArgentinaLuz")
 		{
 			Descuento = 40;
@@ -88,6 +161,12 @@ alert ("Usted pago " + ImporteFinal + " siendo " + IiBb + " el impuesto que se p
 }
 
 	else
-	alert ("Pecio final " + ImporteFinal)		
+	alert ("Pecio final " + ImporteFinal);		
+
+
+*/
+
+
+
 
 }
