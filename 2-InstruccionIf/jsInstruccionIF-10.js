@@ -7,15 +7,19 @@ function mostrar()
 	vNum = Math.round(Math.random() * (vMaximo - vMinimo) + vMinimo);
 	
 if (vNum == 9 || vNum == 10) 
-	{alert("excelente")};
+	{
+		alert("excelente");
+	}
 
 else if ( vNum >= 4)
 {
-	alert(aprobo);	//Genero el número RANDOM entre 1 y 10 
+	alert("aprobo");	//Genero el número RANDOM entre 1 y 10 
 }
 	
 else if (vNum < 4)
-	{alert("vamos, la proxima se puede")}
+	{
+		alert("vamos, la proxima se puede");
+	}
 }
 
 /*

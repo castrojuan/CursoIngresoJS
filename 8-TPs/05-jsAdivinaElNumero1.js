@@ -1,26 +1,47 @@
-/*Al comenzar el juego generamos un número 
-secreto del 1 al 100, en la pantalla del juego
- dispondremos de un cuadro de texto para ingresar
-  un número y un botón “Verificar”, si el número 
-  ingresado es el mismo que el número secreto se dará 
-  por terminado el juego con un mensaje similar a este: 
-“Usted es un ganador!!! y en solo X intentos”.
-de no ser igual se debe informar si “falta…”  para llegar al número secreto  o si “se pasó…”  del número secreto.
-*/
-var numeroSecreto; 
-var contadorIntentos;
+
+let num;
+let i;
+let numeroSecreto;
+let Maximo = 100;
+let Minimo = 1;
+let intentos= 0;
+
 
 function comenzar()
 {
-	//Genero el número RANDOM entre 1 y 100
-	 
-		//alert(numeroSecreto );
 	
+numeroSecreto = Math.round(Math.random() * (Maximo - Minimo) + Minimo);
+
+alert("adivina el numero secreto entre el 1 y el 100 ");
+
 
 }
 
 function verificar()
 {
+	num = parseInt(document.getElementById("txtIdNumero").value);
+	intentos++;
+
 	
+
+	
+
+
+	
+	
+	if(num > numeroSecreto)
+	{
+		alert("se pasó del numero secreto ");
+	}
+
+else if(num < numeroSecreto)
+{
+	alert("falta para llegar al numero secreto");
+}
+
+	if(num == numeroSecreto)
+	{
+		alert("Felicitaciones, usted es el ganador !!, y en solo " + intentos + " intentos");
+	}
 	
 }

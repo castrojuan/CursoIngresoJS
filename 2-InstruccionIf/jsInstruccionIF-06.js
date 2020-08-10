@@ -8,13 +8,13 @@ if (vEdad > 18)
 {
 	alert("mayor de edad");
 }
-if (vEdad >=13 && vEdad <=17)
+else if (vEdad >=13 && vEdad <=17)
 
 {
 	alert("adolescente");
 
 }
-if (vEdad < 13)
+else 
 	
 	{alert ("niño");
 }

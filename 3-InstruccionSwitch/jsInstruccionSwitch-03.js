@@ -6,8 +6,9 @@ function mostrar()
 
 	switch(vMes)
 {
-        case ("Febrero")
-alert("este mes no tiene mas de 29 dias");	
+        case "Febrero":
+{alert("este mes no tiene mas de 29 dias");	
+}
         break;
 
         default:

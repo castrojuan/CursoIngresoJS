@@ -10,10 +10,48 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
 function ComenzarIngreso () 
 {
  	//definicion de variables
- 	var edadIngresada;
- 	var sexoIngresado;
- 	var estadoCivilIngresado;
+ 	let edadIngresada;
+ 	let sexoIngresado;
+ 	let estadoCivilIngresado;
+    let sueldoBruto;
+    let legajo;
+    let nacionalidad;
 
+
+
+    do{
+    edadIngresada=prompt("ingrese su edad");
+    }while(edadIngresada<18 && edadIngresada>90);
+
+
+    do{
+    sexoIngresado=prompt("sexo M / F");
+    }while(sexoIngresado != "M" && sexoIngresado != "F");
+
+    do{
+    estadoCivil=prompt("Estado civil, 1-para soltero, 2-para casados, 3-para divorciados y 4-para viudos");
+    }while(estadoCivil <1 && estadoCivil >4);
+
+    do{
+    sueldoBruto=prompt("Sueldo bruto");
+    }while(sueldoBruto<8000);
+
+    do{
+    legajo=prompt(" Número de legajo, numérico de 4 cifras, sin ceros a la izquierda");
+    }while(legajo<1000 && legajo>9999);
+
+    do{
+    nacionalidad= prompt("Nacionalidad, A para argentinos, E para extranjeros, N para nacionalizados.");
+    }while(nacionalidad!="A" && nacionalidad!="E" && nacionalidad!="N");
+
+
+
+   document.getElementById("txtIdEdad").value =edadIngresada;
+   document.getElementById("txtIdSexo").value =sexoIngresado;
+   document.getElementById("txtIdEstadoCivil").value =estadoCivil;
+   document.getElementById("txtIdSueldo").value =sueldoBruto;
+   document.getElementById("txtIdLegajo").value =legajo;
+   document.getElementById("txtIdNacionalidad").value =nacionalidad;
 
 
 }

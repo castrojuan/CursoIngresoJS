@@ -8,7 +8,7 @@ vEstacion = document.getElementById("txtIdEstacion").value;
 vDestino = document.getElementById("txtIdDestino").value;
 
 
-if((vEstacion == "Invierno" && vDestino == "Bariloche") || (vEstacion == "Verano" && (vDestino == "Mar del plata" || vDestino == "Cataratas")) || (vEstacion == "Otoño") || (vEstacion == "Primavera" || vDestino != "Bariloche"))
+if((vEstacion == "Invierno" && vDestino == "Bariloche") || (vEstacion == "Verano" && (vDestino == "Mar del plata" || vDestino == "Cataratas")) || (vEstacion == "Otoño") || (vEstacion == "Primavera" && vDestino != "Bariloche"))
 
 //else if(vEstacion == "Verano" && (vDestino == "Mar del plata" || vDestino == "Cataratas"))
 

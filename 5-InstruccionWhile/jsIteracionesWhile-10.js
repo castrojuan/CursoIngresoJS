@@ -13,17 +13,76 @@ hasta que el usuario quiera, mostrar:
 function mostrar()
 {
 	//declarar contadores y variables 
-	var respuesta;
-	var numeroIngresado;
-	var sumaNegativos=0;
+	let respuesta;
+	let numeroIngresado;
+	let sumaNegativos=0;
+	let contadorNegativo=0;
+	let contadorCero=0;
+	let contadorpositivo=0;
+	let sumapositivos;
 
-	respuesta="si";
 
-	while(respuesta=="si")
+	respuesta='s';
+
+do
 	{
-		
-		respuesta=prompt("desea continuar?");
-	}//fin del while
+      numeroIngresado = parseInt(prompt("ingrese un numero"));
 
-	document.write("la suma de negativos es :"+sumaNegativos);
+	if(numeroIngresado <= 0)
+	{
+		sumaNegativos = sumaNegativos + numeroIngresado;
+		contadorNegativo++;
+	}
+
+	else if(numeroIngresado > 0)
+
+{
+	sumapositivos = sumapositivos + numeroIngresado;
+    contadorpositivo++;
+}
+
+
+  else if(numeroIngresado == 0)
+
+	{
+		contadorCero++;
+	}
+
+	respuesta=prompt("desea continuar?");
+
+	} while(respuesta=='s');   //fin del while
+
+
+
+
+document.write("el promedio de negativos es :" + sumaNegativos / contadorNegativo);
+
+document.write("la suma de negativos es :"+sumaNegativos);
+
+document.write("la cantidad de positivos" + contadorpositivo);
+
+document.write("la cantidad de negativos" + contadorNegativo);
+
+
+document.write("Promedio de positivos:" + sumapositivos / contadorpositivo);
+
+document.write("la suma de positivos es :"+sumapositivos);
+
+document.write("cantidad de ceros :" + contadorCero);
+
+document.write(" cantidad de  numeros pares :" );
+
+document.write(" Diferencia entre positivos y negativos "+ sumaNegativos + sumaNegativos);
+
+
+
+
+
+
+
+
+
+
+
+
 }//FIN DE LA FUNCIÓN
