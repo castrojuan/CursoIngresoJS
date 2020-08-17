@@ -8,6 +8,7 @@ let Metodopago;
 
 
 Continente = document.getElementById("Marca").value;
+
 Dias = prompt("cuantos dias quiere reservar?");
 do
 {

@@ -12,77 +12,65 @@ hasta que el usuario quiera, mostrar:
 9-Diferencia entre positivos y negativos, (positvos-negativos). */
 function mostrar()
 {
-	//declarar contadores y variables 
-	let respuesta;
-	let numeroIngresado;
-	let sumaNegativos=0;
-	let contadorNegativo=0;
-	let contadorCero=0;
-	let contadorpositivo=0;
-	let sumapositivos;
+	let numero;
+	let positivos;
+	let negativos;
+	let acumuladorPositivos=0;
+	let contadorPositivos=0;
+	let acumuladorNegativos=0;
+	let contadorNegativos=0;
+	let contadorCeros=0;
+	let contadorPares=0;
+	let respuesta='s';
+	let promedioPositivo;
+	let promedioNegativo;
 
 
-	respuesta='s';
-
-do
+	do
 	{
-      numeroIngresado = parseInt(prompt("ingrese un numero"));
+		numero=parseInt(prompt("ingrese un numero"));
+	
+        
+        if(numero>0)
+        {
+        	contadorPositivos++;
+        	acumuladorPositivos=acumuladorPositivos+numero;
+        }
 
-	if(numeroIngresado <= 0)
-	{
-		sumaNegativos = sumaNegativos + numeroIngresado;
-		contadorNegativo++;
-	}
+        else if(numero==0)
+        {
+        	contadorCeros++;
+        	
+        }
+        
+        else
+        {
+        	contadorNegativos++;
+        	acumuladorNegativos=acumuladorNegativos+numero;
+        }
 
-	else if(numeroIngresado > 0)
-
-{
-	sumapositivos = sumapositivos + numeroIngresado;
-    contadorpositivo++;
-}
-
-
-  else if(numeroIngresado == 0)
-
-	{
-		contadorCero++;
-	}
-
-	respuesta=prompt("desea continuar?");
-
-	} while(respuesta=='s');   //fin del while
-
-
-
-
-document.write("el promedio de negativos es :" + sumaNegativos / contadorNegativo);
-
-document.write("la suma de negativos es :"+sumaNegativos);
-
-document.write("la cantidad de positivos" + contadorpositivo);
-
-document.write("la cantidad de negativos" + contadorNegativo);
-
-
-document.write("Promedio de positivos:" + sumapositivos / contadorpositivo);
-
-document.write("la suma de positivos es :"+sumapositivos);
-
-document.write("cantidad de ceros :" + contadorCero);
-
-document.write(" cantidad de  numeros pares :" );
-
-document.write(" Diferencia entre positivos y negativos "+ sumaNegativos + sumaNegativos);
+        if(numero%2==0)
+        {
+        	contadorPares++;
+        }
 
 
 
+     respuesta=prompt("desea agregar mas numeros? ");
 
+	}while(respuesta=='s');
+	
+promedioPositivo=acumuladorPositivos/contadorPositivos;
+promedioNegativo=acumuladorNegativos/contadorNegativos;
 
-
-
-
-
-
-
+console.log("Suma de los negativos es " + acumuladorNegativos);
+console.log("Suma de los positivos " + acumuladorPositivos);
+console.log("Cantidad de positivos "+ contadorPositivos);
+console.log("Cantidad de negativos " + contadorNegativos);
+console.log("Cantidad de ceros " + contadorCeros);
+console.log("Cantidad de números pares " + contadorPares);
+console.log("Promedio de positivos " + promedioPositivo.toFixed(2));
+console.log("Promedios de negativos " + promedioNegativo.toFixed(2));
+console.log("Diferencia entre positivos y negativos "+ (acumuladorPositivos - acumuladorNegativos));
 
 }//FIN DE LA FUNCIÓN
